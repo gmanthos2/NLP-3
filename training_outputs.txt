@@ -1,0 +1,232 @@
+Training the model for multiple iterations...
+
+====================================
+         ITERATION 1/3
+====================================
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 1199.68it/s]
+[transformers] BertForTokenClassification LOAD REPORT from: bert-base-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.pooler.dense.weight                   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+bert.pooler.dense.bias                     | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Epoch 1/3
+Iter 1 - Epoch 1: 100%|██████████| 1756/1756 [12:19<00:00,  2.38it/s]
+Epoch 2/3
+Iter 1 - Epoch 2: 100%|██████████| 1756/1756 [12:17<00:00,  2.38it/s]
+Epoch 3/3
+Iter 1 - Epoch 3: 100%|██████████| 1756/1756 [12:17<00:00,  2.38it/s]
+Training Time for Iteration 1: 2215.09 seconds
+Applying the model to the test set...
+--> Token Micro Acc : 0.9801
+--> Token Macro Acc : 0.9079
+--> Entity Micro F1 : 0.9014
+--> Entity Macro F1 : 0.8846
+
+====================================
+         ITERATION 2/3
+====================================
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 10925.56it/s]
+[transformers] BertForTokenClassification LOAD REPORT from: bert-base-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.pooler.dense.weight                   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+bert.pooler.dense.bias                     | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Epoch 1/3
+Iter 2 - Epoch 1: 100%|██████████| 1756/1756 [12:17<00:00,  2.38it/s]
+Epoch 2/3
+Iter 2 - Epoch 2: 100%|██████████| 1756/1756 [12:18<00:00,  2.38it/s]
+Epoch 3/3
+Iter 2 - Epoch 3: 100%|██████████| 1756/1756 [12:02<00:00,  2.43it/s]
+Training Time for Iteration 2: 2199.21 seconds
+Applying the model to the test set...
+--> Token Micro Acc : 0.9795
+--> Token Macro Acc : 0.9085
+--> Entity Micro F1 : 0.8996
+--> Entity Macro F1 : 0.8819
+
+====================================
+         ITERATION 3/3
+====================================
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 11250.91it/s]
+[transformers] BertForTokenClassification LOAD REPORT from: bert-base-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.pooler.dense.weight                   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+bert.pooler.dense.bias                     | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Epoch 1/3
+Iter 3 - Epoch 1: 100%|██████████| 1756/1756 [12:02<00:00,  2.43it/s]
+Epoch 2/3
+Iter 3 - Epoch 2: 100%|██████████| 1756/1756 [12:01<00:00,  2.43it/s]
+Epoch 3/3
+Iter 3 - Epoch 3: 100%|██████████| 1756/1756 [12:01<00:00,  2.43it/s]
+Training Time for Iteration 3: 2165.52 seconds
+Applying the model to the test set...
+--> Token Micro Acc : 0.9795
+--> Token Macro Acc : 0.8936
+--> Entity Micro F1 : 0.8914
+--> Entity Macro F1 : 0.8751
+
+=== FINAL STATISTICS OVER 3 ITERATIONS ===
+Training Time         : Mean = 2193.27 s, Std = 20.67 s
+Token-level Micro Acc : Mean = 0.9797, Std = 0.0003
+Token-level Macro Acc : Mean = 0.9033, Std = 0.0069
+Entity-level Micro F1 : Mean = 0.8974, Std = 0.0044
+Entity-level Macro F1 : Mean = 0.8805, Std = 0.0040
+
+
+
+
+
+Training the model with frozen BERT weights...
+
+====================================
+         ITERATION 1/3
+====================================
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 11530.21it/s]
+[transformers] BertForTokenClassification LOAD REPORT from: bert-base-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.pooler.dense.weight                   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+bert.pooler.dense.bias                     | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Total Parameters: 108,898,569
+Trainable Parameters: 6,921
+Frozen Parameters: 108,891,648
+
+Epoch 1/3
+Iter 1 - Epoch 1: 100%|██████████| 1756/1756 [03:48<00:00,  7.69it/s]
+Epoch 2/3
+Iter 1 - Epoch 2: 100%|██████████| 1756/1756 [03:48<00:00,  7.68it/s]
+Epoch 3/3
+Iter 1 - Epoch 3: 100%|██████████| 1756/1756 [03:48<00:00,  7.70it/s]
+Training Time (Frozen) for Iteration 1: 684.95 seconds
+--> Token Micro Acc : 0.8484
+--> Token Macro Acc : 0.1966
+--> Entity Micro F1 : 0.2265
+--> Entity Macro F1 : 0.1818
+
+====================================
+         ITERATION 2/3
+====================================
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 10808.37it/s]
+[transformers] BertForTokenClassification LOAD REPORT from: bert-base-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.pooler.dense.weight                   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+bert.pooler.dense.bias                     | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Epoch 1/3
+Iter 2 - Epoch 1: 100%|██████████| 1756/1756 [03:47<00:00,  7.72it/s]
+Epoch 2/3
+Iter 2 - Epoch 2: 100%|██████████| 1756/1756 [03:46<00:00,  7.76it/s]
+Epoch 3/3
+Iter 2 - Epoch 3: 100%|██████████| 1756/1756 [03:41<00:00,  7.92it/s]
+Training Time (Frozen) for Iteration 2: 675.42 seconds
+--> Token Micro Acc : 0.8522
+--> Token Macro Acc : 0.2056
+--> Entity Micro F1 : 0.2519
+--> Entity Macro F1 : 0.1950
+
+====================================
+         ITERATION 3/3
+====================================
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 12636.34it/s]
+[transformers] BertForTokenClassification LOAD REPORT from: bert-base-uncased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+bert.pooler.dense.weight                   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+bert.pooler.dense.bias                     | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Epoch 1/3
+Iter 3 - Epoch 1: 100%|██████████| 1756/1756 [03:41<00:00,  7.91it/s]
+Epoch 2/3
+Iter 3 - Epoch 2: 100%|██████████| 1756/1756 [03:41<00:00,  7.91it/s]
+Epoch 3/3
+Iter 3 - Epoch 3: 100%|██████████| 1756/1756 [03:41<00:00,  7.92it/s]
+Training Time (Frozen) for Iteration 3: 665.62 seconds
+--> Token Micro Acc : 0.8533
+--> Token Macro Acc : 0.2126
+--> Entity Micro F1 : 0.2500
+--> Entity Macro F1 : 0.1985
+
+=== FINAL STATISTICS FOR FROZEN MODEL (3 ITERATIONS) ===
+Training Time         : Mean = 675.33 s, Std = 7.89 s
+Token-level Micro Acc : Mean = 0.8513, Std = 0.0021
+Token-level Macro Acc : Mean = 0.2049, Std = 0.0065
+Entity-level Micro F1 : Mean = 0.2428, Std = 0.0115
+Entity-level Macro F1 : Mean = 0.1918, Std = 0.0072
